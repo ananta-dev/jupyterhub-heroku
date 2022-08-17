@@ -1,8 +1,10 @@
 from jupyterhub.spawner import SimpleLocalProcessSpawner
 
 # setting a dummy user admin for now
+
 c.JupyterHub.authenticator_class = "dummy"
 c.DummyAuthenticator.password = "admin"
+c.Authenticator.admin_users = {'juan'}
 
 # using simplelocalspawner for now
 c.JupyterHub.spawner_class = SimpleLocalProcessSpawner
